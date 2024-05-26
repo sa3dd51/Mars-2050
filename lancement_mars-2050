@@ -1,0 +1,27 @@
+pipeline {
+    /* Script MARS-2050 */
+    agent any
+
+    stages {
+        stage('Etude meteorologique') {
+            steps {
+                echo 'etudes sur l etat meteo'
+            }
+        }
+        stage('Perparation de la trajectoire') {
+            steps {
+                echo 'Etudes des conditions et creation de la trajectoire'
+            }
+        }
+        stage('Lancement') {
+            steps {
+                echo 'Lancement en cours...'
+            }
+        }
+        stage('suivi trajectoire') {
+            steps {
+                echo 'suivi de la trajectoire'
+            }
+        }
+    }
+}
