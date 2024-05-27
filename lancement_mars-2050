@@ -8,7 +8,7 @@ pipeline {
                 echo 'etudes sur l etat meteo'
             }
         }
-        stage('Perparation de la trajectoire') {
+        stage('Preparation de la trajectoire') {
             steps {
                 echo 'Etudes des conditions et creation de la trajectoire'
             }
