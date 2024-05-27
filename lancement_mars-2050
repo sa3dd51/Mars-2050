@@ -2,7 +2,7 @@ pipeline {
     /* Script MARS-2050 */
 agent any
 parameters {
-string(name: 'NAME', description: 'Nom de l'operateur')
+string(name: 'NAME', description: 'Nom de l operateur')
 choice(name: 'GENDER', choices: ['Male', 'Female'], description: 'Choisissez votre genre')
 }
 stages {
@@ -20,8 +20,7 @@ stages {
             }
         }
     }
-    stages {
-        stage('Etude meteorologique') {
+     stage('Etude meteorologique') {
             steps {
                 echo 'etudes sur l etat meteo'
             }
