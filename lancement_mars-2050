@@ -1,7 +1,25 @@
 pipeline {
     /* Script MARS-2050 */
-    agent any
-
+agent any
+parameters {
+string(name: 'NAME', description: 'Nom de l'operateur')
+choice(name: 'GENDER', choices: ['Male', 'Female'], description: 'Choisissez votre genre')
+}
+stages {
+    stage('Presentation de loperateur') {
+        steps {
+            script {
+                def name = "${params.NAME}"
+                def gender = "${params.GENDER}"
+                if(gender == "Male") {
+                echo "Bonjour, Mr. $name"
+                        }
+                else {
+                echo "Bonjour, Mrs. $name"
+                }
+            }
+        }
+    }
     stages {
         stage('Etude meteorologique') {
             steps {
